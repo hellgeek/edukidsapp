@@ -132,3 +132,9 @@ form {
 .next-button:active {
   transform: translateY(1px); /* Efecto de clic */
 }
+
+.error {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+}

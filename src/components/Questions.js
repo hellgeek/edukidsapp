@@ -3,24 +3,30 @@ import React, { useState } from 'react';
 
 const Question = ({ questionData, onAnswer }) => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [error, setError] = useState('');
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
+    setError('');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAnswer(selectedOption === questionData.answer);
-    setSelectedOption(null);
+    if (selectedOption === null) {
+      setError('Por favor seleccione una opcion antes de proceder.');
+    } else {
+      onAnswer(selectedOption === questionData.answer);
+      setSelectedOption(null);
+    }
   };
 
   return (
     <div className="question">
       <h2>{questionData.question}</h2>
       <form onSubmit={handleSubmit}>
-        <div className="options">
-          {questionData.options.map((option, index) => (
-            <label key={index} className="option">
+        {questionData.options.map((option, index) => (
+          <div key={index}>
+            <label>
               <input
                 type="radio"
                 value={option}
@@ -29,9 +35,10 @@ const Question = ({ questionData, onAnswer }) => {
               />
               {option}
             </label>
-          ))}
-        </div>
-        <button type="submit" className="next-button">Siguiente Pregunta</button>
+          </div>
+        ))}
+        {error && <p className="error">{error}</p>}
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
