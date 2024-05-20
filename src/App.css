@@ -1,6 +1,5 @@
 /* src/App.css */
 
-
 body {
   display: flex;
   justify-content: center;
@@ -50,11 +49,11 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 25px; /* Botones más redondeados */
+  border-radius: 25px; 
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
   font-size: 1em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 button:hover {

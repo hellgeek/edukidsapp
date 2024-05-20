@@ -13,7 +13,7 @@ const Question = ({ questionData, onAnswer }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (selectedOption === null) {
-      setError('Por favor seleccione una opcion antes de proceder.');
+      setError('Por favor seleccione una opción antes de proceder.');
     } else {
       onAnswer(selectedOption === questionData.answer);
       setSelectedOption(null);
@@ -24,9 +24,9 @@ const Question = ({ questionData, onAnswer }) => {
     <div className="question">
       <h2>{questionData.question}</h2>
       <form onSubmit={handleSubmit}>
-        {questionData.options.map((option, index) => (
-          <div key={index}>
-            <label>
+        <div className="options">
+          {questionData.options.map((option, index) => (
+            <label key={index} className="option">
               <input
                 type="radio"
                 value={option}
@@ -35,10 +35,10 @@ const Question = ({ questionData, onAnswer }) => {
               />
               {option}
             </label>
-          </div>
-        ))}
+          ))}
+        </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit">Submit</button>
+        <button type="submit" className="next-button">Submit</button>
       </form>
     </div>
   );
