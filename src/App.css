@@ -1,0 +1,134 @@
+/* src/App.css */
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Fondo azul claro */
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff4500; /* Naranja brillante */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #32cd32; /* Verde lima */
+}
+
+.background-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(45deg, #1e90ff, #00c6ff); /* Gradiente azul */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px; /* Botones más redondeados */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+}
+
+button:hover {
+  background: linear-gradient(45deg, #1c86ee, #009ae1); /* Gradiente más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+button:active {
+  transform: translateY(1px); /* Efecto de clic */
+}
+
+.warning {
+  margin-top: 20px;
+  color: #ff6347; /* Rojo tomate */
+  font-size: 1em;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background-color: #f0f8ff; /* Fondo claro */
+  border: 2px solid #1e90ff; /* Borde azul */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de las opciones */
+}
+
+.option:hover {
+  background-color: #e0f7ff; /* Fondo más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #1e90ff; /* Color del botón de radio */
+}
+
+.next-button {
+  background: linear-gradient(45deg, #1e90ff, #00c6ff); /* Gradiente azul */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px; /* Botones más redondeados */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+  margin-top: 20px;
+}
+
+.next-button:hover {
+  background: linear-gradient(45deg, #1c86ee, #009ae1); /* Gradiente más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+.next-button:active {
+  transform: translateY(1px); /* Efecto de clic */
+}
